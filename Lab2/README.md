@@ -30,8 +30,71 @@
 | `SessionManager` | `sessions` | `create_session()`, `invalidate()` |
 
 **Ассоциации:**  
-- `Customer` ↔ `Account` — один клиент владеет одним или несколькими аккаунтами.  
-- `AuthService` использует `PasswordPolicy` и `SessionManager`.
+🔹 Список основных ассоциаций (≥30)
+
+Customer ↔ Account
+
+AuthService ↔ PasswordPolicy
+
+AuthService ↔ SessionManager
+
+Customer ↔ Cart
+
+Customer ↔ Order
+
+Cart ↔ OrderItem
+
+Order ↔ OrderItem
+
+Order ↔ Invoice
+
+Order ↔ Receipt
+
+OrderItem ↔ Product
+
+Cart ↔ Product
+
+Warehouse ↔ InventoryItem
+
+PurchaseOrder ↔ Supplier
+
+PurchaseOrder ↔ InventoryItem
+
+Transaction ↔ Card
+
+Transaction ↔ Wallet
+
+Account ↔ Transaction
+
+Card ↔ Customer
+
+Wallet ↔ Customer
+
+PaymentProcessor ↔ PaymentGateway
+
+Courier ↔ Shipment
+
+Shipment ↔ Order
+
+AnalyticsService ↔ Order
+
+AnalyticsService ↔ Transaction
+
+AnalyticsService ↔ InventoryItem
+
+FraudDetector ↔ Transaction
+
+TaxCalculator ↔ Order
+
+RecommendationEngine ↔ Customer
+
+RecommendationEngine ↔ Product
+
+SearchService ↔ Product
+
+CurrencyConverter ↔ Transaction
+
+NotificationService ↔ Customer
 
 ---
 
