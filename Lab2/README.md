@@ -31,70 +31,40 @@
 
 **Ассоциации:**  
 🔹 Список основных ассоциаций (≥30)
-
-Customer ↔ Account
-
-AuthService ↔ PasswordPolicy
-
-AuthService ↔ SessionManager
-
-Customer ↔ Cart
-
-Customer ↔ Order
-
-Cart ↔ OrderItem
-
-Order ↔ OrderItem
-
-Order ↔ Invoice
-
-Order ↔ Receipt
-
-OrderItem ↔ Product
-
-Cart ↔ Product
-
-Warehouse ↔ InventoryItem
-
-PurchaseOrder ↔ Supplier
-
-PurchaseOrder ↔ InventoryItem
-
-Transaction ↔ Card
-
-Transaction ↔ Wallet
-
-Account ↔ Transaction
-
-Card ↔ Customer
-
-Wallet ↔ Customer
-
-PaymentProcessor ↔ PaymentGateway
-
-Courier ↔ Shipment
-
-Shipment ↔ Order
-
-AnalyticsService ↔ Order
-
-AnalyticsService ↔ Transaction
-
-AnalyticsService ↔ InventoryItem
-
-FraudDetector ↔ Transaction
-
-TaxCalculator ↔ Order
-
-RecommendationEngine ↔ Customer
-
-RecommendationEngine ↔ Product
-
-SearchService ↔ Product
-
-CurrencyConverter ↔ Transaction
-
-NotificationService ↔ Customer
+| №  | Класс 1              | Класс 2        | Тип связи / Описание                                 |
+| -- | -------------------- | -------------- | ---------------------------------------------------- |
+| 1  | Customer             | Account        | Один клиент владеет одним или несколькими аккаунтами |
+| 2  | AuthService          | PasswordPolicy | AuthService использует правила пароля                |
+| 3  | AuthService          | SessionManager | AuthService управляет сессиями через SessionManager  |
+| 4  | Customer             | Cart           | Каждый клиент имеет корзину                          |
+| 5  | Customer             | Order          | Клиент делает заказы                                 |
+| 6  | Cart                 | OrderItem      | Корзина содержит элементы заказа                     |
+| 7  | Order                | OrderItem      | Заказ состоит из элементов заказа                    |
+| 8  | Order                | Invoice        | Заказ связан с выставленным счётом                   |
+| 9  | Order                | Receipt        | Заказ связан с квитанцией                            |
+| 10 | OrderItem            | Product        | Элемент заказа относится к конкретному продукту      |
+| 11 | Cart                 | Product        | Корзина содержит продукты                            |
+| 12 | Warehouse            | InventoryItem  | Склад содержит позиции инвентаря                     |
+| 13 | PurchaseOrder        | Supplier       | Заказ поставки связан с поставщиком                  |
+| 14 | PurchaseOrder        | InventoryItem  | Заказ поставки содержит позиции инвентаря            |
+| 15 | Transaction          | Card           | Транзакция проводится с картой                       |
+| 16 | Transaction          | Wallet         | Транзакция проводится через кошелёк                  |
+| 17 | Account              | Transaction    | Аккаунт участвует в транзакциях                      |
+| 18 | Card                 | Customer       | Карта принадлежит клиенту                            |
+| 19 | Wallet               | Customer       | Кошелёк принадлежит клиенту                          |
+| 20 | PaymentProcessor     | PaymentGateway | PaymentProcessor использует шлюз оплаты              |
+| 21 | Courier              | Shipment       | Курьер обслуживает отправки                          |
+| 22 | Shipment             | Order          | Отправка относится к заказу                          |
+| 23 | AnalyticsService     | Order          | Сервис аналитики анализирует заказы                  |
+| 24 | AnalyticsService     | Transaction    | Сервис аналитики анализирует транзакции              |
+| 25 | AnalyticsService     | InventoryItem  | Сервис аналитики анализирует позиции склада          |
+| 26 | FraudDetector        | Transaction    | Проверка мошенничества по транзакциям                |
+| 27 | TaxCalculator        | Order          | Расчёт налогов на заказ                              |
+| 28 | RecommendationEngine | Customer       | Рекомендации для клиентов                            |
+| 29 | RecommendationEngine | Product        | Рекомендации включают продукты                       |
+| 30 | SearchService        | Product        | Поиск осуществляется по продуктам                    |
+| 31 | CurrencyConverter    | Transaction    | Конвертация валют в транзакциях                      |
+| 32 | NotificationService  | Customer       | Отправка уведомлений клиентам                        |
 
 ---
 
