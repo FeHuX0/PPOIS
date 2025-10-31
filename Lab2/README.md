@@ -6,24 +6,7 @@
 
 ---
 
-## Архитектура проекта
 
-src/
-├── minimarket/
-│ ├── core/ # Базовые интерфейсы и абстракции
-│ ├── customers/ # Клиенты, аккаунты, сессии
-│ ├── errors/ # Кастомные исключения
-│ ├── inventory/ # Склад, поставщики, инвентарь
-│ ├── logistics/ # Доставка и курьеры
-│ ├── misc/ # Мелкие сущности (адрес, отзывы)
-│ ├── orders/ # Корзина, заказ, чек
-│ ├── payments/ # Карты, транзакции, процессоры
-│ ├── products/ # Товары, категории, магазины
-│ └── services/ # Сервисы аналитики, налогов, уведомлений
-└── tests/ # Unit и integration тесты
-
-
----
 
 ##  Основные пакеты и классы
 
@@ -158,10 +141,3 @@ src/
 
 ---
 
-##  Ассоциации (UML-образно)
-
-Customer ──┬──> Account ───> Transaction
-└──> Cart ───> Order ───> Invoice
-Product ───> InventoryItem ───> Warehouse
-Shipment <── Courier
-PaymentProcessor ───> PaymentGateway
