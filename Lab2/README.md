@@ -1,6 +1,7 @@
 # Minimarket Domain Model
 
 Account 3 3 → Customer, Wallet
+
 Address 3 2 → Customer, Shipment
 AnalyticsService 3 2 → Order, Product, Customer
 AuthService 3 2 → Customer, Account, SessionManager
