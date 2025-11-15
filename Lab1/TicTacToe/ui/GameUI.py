@@ -10,7 +10,7 @@ X_COLOR = (200, 30, 30)
 O_COLOR = (30, 30, 200)
 
 
-class Game:
+class GameUI:
     def __init__(self):
         pygame.init()
         self.size = 300
@@ -73,3 +73,4 @@ class Game:
             self.draw_status()
             pygame.display.flip()
             clock.tick(30)
+
